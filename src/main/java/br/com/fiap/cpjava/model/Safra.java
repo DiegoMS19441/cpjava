@@ -24,7 +24,7 @@ public class Safra {
     @Column(name = "nome_safra", nullable = false, length = 100)
     private String nome;
 
-    @Column(name = "dt_safra", nullable = false)
+    @Column(name = "dt_inicio", nullable = false)
     private LocalDateTime dataInicio;
 
     @Column(name = "dt_safra", nullable = false)

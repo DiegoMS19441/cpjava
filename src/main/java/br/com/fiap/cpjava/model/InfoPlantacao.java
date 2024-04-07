@@ -27,8 +27,7 @@ public class InfoPlantacao {
     private String solo;
 
     @Column(name="tm_area_platada")
-    private Integer areaPlantada; //Aréa plantada será contada em Metros!!!
-
+    private Integer areaPlantada;
     public InfoPlantacao(CadastrarInfoPlatacaoDto PlantacaoDto) {
         clima = PlantacaoDto.clima();
         solo = PlantacaoDto.Solo();

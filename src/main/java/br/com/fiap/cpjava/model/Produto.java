@@ -22,7 +22,7 @@ public class Produto {
     @Column(name="nm_produto", length = 30, nullable = false)
     private String nome;
 
-    @Column(name="tb_produto")
+    @Column(name="tp_produto")
     private String tipoProduto;
 
     public Produto(CadastrarProdutoDto produtoDto) {

@@ -26,7 +26,7 @@ public class Colheita {
     @Column(name="dt_colheita", nullable = false)
     private LocalDateTime dataColheita;
 
-    @Column(name="dt_colheita", nullable = false)
+    @Column(name="qnt_colheita", nullable = false)
     private Integer quantidade;
 
     @Column(name ="area_colheita")

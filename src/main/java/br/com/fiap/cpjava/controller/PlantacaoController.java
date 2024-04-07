@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
-@RequestMapping("infoplantacao")
+@RequestMapping("infoplantacoes")
 public class PlantacaoController {
 
     @Autowired

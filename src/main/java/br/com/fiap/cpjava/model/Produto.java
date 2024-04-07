@@ -1,5 +1,7 @@
 package br.com.fiap.cpjava.model;
 
+import br.com.fiap.cpjava.dto.produtoDto.AtualizarProdutoDto;
+import br.com.fiap.cpjava.dto.produtoDto.CadastrarProdutoDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,10 +25,15 @@ public class Produto {
     @Column(name="tb_produto")
     private String tipoProduto;
 
-    public Produto(CadastroProdutoDto produtoDto) {
-        id = infoPlantacaoDto.id();
-        nome = infoPlantacaoDto.nome();
-        tipoProduto = infoPlantacaoDto.tipoProduto();
+    public Produto(CadastrarProdutoDto produtoDto) {
+        nome = produtoDto.nome();
+        tipoProduto = produtoDto.tipoProduto();
+    }
+    public void atualizarProduto(AtualizarProdutoDto dto){
+        if (dto.nome() != null)
+            nome = dto.nome();
+        if (dto.tipoProduto() != null)
+            tipoProduto = dto.tipoProduto();
     }
 
 }

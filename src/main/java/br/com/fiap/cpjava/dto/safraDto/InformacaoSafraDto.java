@@ -1,6 +1,5 @@
 package br.com.fiap.cpjava.dto.safraDto;
 
-import br.com.fiap.cpjava.model.Agricultor;
 import br.com.fiap.cpjava.model.Safra;
 
 import java.time.LocalDateTime;

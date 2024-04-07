@@ -30,7 +30,7 @@ public class Agricultor {
     @Column(name="des_endereco",nullable = false)
     private String endereco;
 
-    @Column(name="tf_agricultor",nullable = false)
+    @Column(name="tel_agricultor",nullable = false)
     private String telefone;
 
     public Agricultor(CadastrarAgricultorDto agricultorDto) {

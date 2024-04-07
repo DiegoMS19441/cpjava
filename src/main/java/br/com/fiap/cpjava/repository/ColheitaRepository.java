@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;
 
-public interface ColheitaRepository extends JpaRepository<Colheita, LocalDate> {
+public interface ColheitaRepository extends JpaRepository<Colheita, Long> {
 }

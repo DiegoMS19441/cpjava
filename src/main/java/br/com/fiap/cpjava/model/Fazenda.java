@@ -38,7 +38,7 @@ public class Fazenda {
     @Column(name="email_fazenda", nullable = false, length = 30)
     private String email;
 
-    @Column(name="tf_fazenda", precision = 7)
+    @Column(name="tel_fazenda", precision = 7)
     private String telefone;
 
     @Column(name="hectares_fazenda", precision = 7)

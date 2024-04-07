@@ -3,15 +3,19 @@ package br.com.fiap.cpjava.controller;
 import br.com.fiap.cpjava.dto.fazendaDto.AtualizarFazendaDto;
 import br.com.fiap.cpjava.dto.fazendaDto.CadastrarFazendaDto;
 import br.com.fiap.cpjava.dto.fazendaDto.InformacaoFazendaDto;
+import br.com.fiap.cpjava.dto.fazendaDto.ListagemFazendaDto;
 import br.com.fiap.cpjava.model.Fazenda;
 import br.com.fiap.cpjava.repository.FazendaRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-    @RestController
+import java.util.List;
+
+@RestController
     @RequestMapping("fazendas")
     public class FazendaController {
 
@@ -47,5 +51,12 @@ import org.springframework.web.util.UriComponentsBuilder;
             var fazenda = fazendaRepository.getReferenceById(id);
             return ResponseEntity.ok(new InformacaoFazendaDto(fazenda));
         }
+    @GetMapping
+    public ResponseEntity<List<ListagemFazendaDto>> get(Pageable pageable) {
+        var listaDto = fazendaRepository.findAll(pageable)
+                .stream().map(ListagemFazendaDto::new).toList();
+        return ResponseEntity.ok(listaDto);
+
     }
+}
 
